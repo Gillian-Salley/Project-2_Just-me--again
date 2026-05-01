@@ -1,0 +1,146 @@
+/* ==========================================================================
+   Bootstrap Flexbox & Layout 유틸리티 스타일 모음
+   ========================================================================== */
+
+/* 1. Display 및 컨테이너 */
+.d-flex {
+    display: flex;
+}
+.d-inline-flex {
+    display: inline-flex;
+}
+
+/* 2. Flex 방향 및 정렬 */
+.flex-row {
+    flex-direction: row;
+}
+.flex-row-reverse {
+    flex-direction: row-reverse;
+}
+.flex-column {
+    flex-direction: column;
+}
+.flex-column-reverse {
+    flex-direction: column-reverse;
+}
+
+/* 가로축 정렬 */
+.justify-content-start {
+    justify-content: flex-start;
+}
+.justify-content-center {
+    justify-content: center;
+}
+.justify-content-end {
+    justify-content: flex-end;
+}
+.justify-content-between {
+    justify-content: space-between;
+}
+.justify-content-around {
+    justify-content: space-around;
+}
+.justify-content-evenly {
+    justify-content: space-evenly;
+}
+
+/* 세로축 정렬 */
+.align-items-start {
+    align-items: flex-start;
+}
+.align-items-center {
+    align-items: center;
+}
+.align-items-end {
+    align-items: flex-end;
+}
+.align-items-baseline {
+    align-items: baseline;
+}
+.align-items-stretch {
+    align-items: stretch;
+}
+
+/* 여러 줄 정렬 (align-content) */
+.align-content-start {
+    align-content: flex-start;
+}
+.align-content-center {
+    align-content: center;
+}
+.align-content-end {
+    align-content: flex-end;
+}
+.align-content-between {
+    align-content: space-between;
+}
+.align-content-around {
+    align-content: space-around;
+}
+.align-content-stretch {
+    align-content: stretch;
+}
+
+/* 3. 아이템 관련 스타일 */
+.order-0 { order: 0; }
+.order-1 { order: 1; }
+.order-2 { order: 2; }
+.order-3 { order: 3; }
+.order-4 { order: 4; }
+.order-5 { order: 5; }
+.order-last { order: 999; } /* 또는 큰 정수값 */
+
+.align-self-start {
+    align-self: flex-start;
+}
+.align-self-center {
+    align-self: center;
+}
+.align-self-end {
+    align-self: flex-end;
+}
+.align-self-stretch {
+    align-self: stretch;
+}
+
+/* 4. 간격 (Gap) 스타일 */
+.gap-3 {
+    gap: 1rem; /* 16px 기준 */
+}
+.gap-x-3 {
+    column-gap: 1rem;
+}
+.gap-y-3 {
+    row-gap: 1rem;
+}
+
+/* 5. 테두리 (Border) 스타일 */
+.border {
+    border: 1px solid #dee2e6;
+}
+.border-0 {
+    border: 0;
+}
+
+/* 방향별 테두리 */
+.border-top { border-top: 1px solid #dee2e6; }
+.border-bottom { border-bottom: 1px solid #dee2e6; }
+.border-start { border-left: 1px solid #dee2e6; }
+.border-end { border-right: 1px solid #dee2e6; }
+
+/* 색상별 테두리 */
+.border-primary { border-color: #0d6efd; }
+.border-secondary { border-color: #6c757d; }
+.border-success { border-color: #198754; }
+.border-danger { border-color: #dc3545; }
+.border-warning { border-color: #ffc107; }
+.border-info { border-color: #0dcaf0; }
+.border-light { border-color: #f8f9fa; }
+.border-dark { border-color: #212529; }
+
+/* 두께별 테두리 */
+.border-1 { border-width: 1px; }
+.border-2 { border-width: 2px; }
+.border-3 { border-width: 3px; }
+.border-4 { border-width: 4px; }
+.border-5 { border-width: 5px; }
