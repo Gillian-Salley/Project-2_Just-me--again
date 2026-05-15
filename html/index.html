@@ -33,6 +33,9 @@
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
+
   <!-- Font -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
 
@@ -90,48 +93,113 @@
   </div>
 </header>
 
-    <!-- Hero -->
-    <section class="hero" id="find">
-      <div class="container h-100 position-relative">
-        <div class="hero-container">
-          <div class="hero-text">
-            
-            <h2> 온전히 ‘나’로<br>
+<!-- Hero Swiper -->
+<section class="hero" id="find">
+  <div class="swiper hero-swiper" id="mainBannerSection">
+
+    <div class="swiper-wrapper">
+
+      <!-- Slide 1 -->
+      <div class="swiper-slide hero-slide slide-01">
+        <div class="container h-100 position-relative">
+          <div class="hero-container">
+            <div class="hero-text">
+              <h2>
+                온전히 ‘나’로<br>
                 있을 수 있는 곳
-            </h2>
+              </h2>
 
-            <p>오늘의 감정과 상황에 맞는 공간을 추천받아보세요</p>
-
-          </div>
-            
+              <p>오늘의 감정과 상황에 맞는 공간을 추천받아보세요</p>
+            </div>
 
             <a href="#recommend" class="hero-btn">
-                공간찾기 시작하기
-                <span>→</span>
+              공간찾기 시작하기
+              <span>→</span>
             </a>
-        </div>
-
-        <div class="hero-dots d-flex">
-          <button class="active" type="button" aria-label="첫 번째 배너"></button>
-          <button type="button" aria-label="두 번째 배너"></button>
-          <button type="button" aria-label="세 번째 배너"></button>
-          <button type="button" aria-label="네 번째 배너"></button>
+          </div>
         </div>
       </div>
-    </section>
 
-    <main>
-      <section class="recommend-section" id="recommend">
-        <h2>-- 오늘의 추천 공간 --</h2>
-      </section>
-    </main>
+      <!-- Slide 2 -->
+      <div class="swiper-slide hero-slide slide-02">
+        <div class="container h-100 position-relative">
+          <div class="hero-container">
+            <div class="hero-text">
+              <h2>
+                2026년 5월의 공간
+              </h2>
+
+              <p>연서의 정원</p>
+            </div>
+
+            <a href="#recommend" class="hero-btn">
+              공간 보러가기
+              <span>→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="swiper-slide hero-slide slide-03">
+        <div class="container h-100 position-relative">
+         <div class="hero-container">
+          <div class="hero-text">
+            <h3>소개하고 싶은</h3>
+            <h2>나만의 공간이 있다면?</h2>
+          </div>
+
+          <a href="#recommend" class="hero-btn">
+            제보하기
+            <span>→</span>
+          </a>
+        </div>
+        </div>
+      </div>
+
+      <!-- Slide 4 -->
+      <div class="swiper-slide hero-slide slide-04">
+        <div class="container h-100 position-relative">
+          <div class="hero-container">
+            <div class="hero-text">
+              <h2>
+                공간 사장님이라면?
+              </h2>
+
+              <p>우리 가게를 Just Me Again,에 소개해보세요!</p>
+            </div>
+
+            <a href="#recommend" class="hero-btn">
+              공간등록하러 가기
+              <span>→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Pagination -->
+    <div class="swiper-pagination hero-pagination"></div>
+
+    <!-- Navigation -->
+    <div class="swiper-button-prev hero-prev"></div>
+    <div class="swiper-button-next hero-next"></div>
 
   </div>
+</section>
+    
+  </div>
 
+ 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
   <!-- Custom JS -->
-  <script src="../js/main.js"></script>
+   <script src="../js.js"></script>
+
 </body>
 </html>

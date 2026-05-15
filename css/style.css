@@ -129,7 +129,7 @@ button {
   margin-top: 14px;
 
   display: flex;
-  justify-content: right;
+  justify-content: flex-end;
   align-items: center;
   gap: 12px;
 
@@ -138,19 +138,203 @@ button {
   color: #4b4038;
 }
 
-/* Hero */
+/* Hero Swiper */
 .hero {
   width: 100%;
   height: 639px;
-  background: url("../image/hero\ banner.png") no-repeat center center;
+  position: relative;
+}
+
+.hero-swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.hero-slide {
+  width: 100%;
+  height: 639px;
+  background-repeat: no-repeat;
+  background-position: center center;
   background-size: cover;
   position: relative;
 }
 
+/* 배너 이미지 */
+.slide-01 {
+  background-image: url("../image/herobanner1.png");
+}
 
+.slide-02 {
+  background-image: url("../image/herobanner2.png");
+}
+
+/* Slide 02 수정: 박스 제거 + 자연스러운 텍스트 */
+.slide-02::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(35, 25, 18, 0.42) 0%,
+    rgba(35, 25, 18, 0.24) 32%,
+    rgba(35, 25, 18, 0.04) 65%,
+    rgba(35, 25, 18, 0) 100%
+  );
+  z-index: 1;
+}
+
+.slide-02 .container {
+  position: relative;
+  z-index: 2;
+}
+
+.slide-02 .hero-container {
+  left: 80px;
+  bottom: 130px;
+  gap: 24px;
+
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
+  backdrop-filter: none;
+}
+
+.slide-02 .hero-text {
+  gap: 12px;
+}
+
+.slide-02 .hero-text h2 {
+  font-size: 34px;
+  color: #fffaf5;
+}
+
+.slide-02 .hero-text p {
+  font-size: 64px;
+  color: #fff;
+}
+
+.slide-02 .hero-btn {
+  width: 210px;
+  height: 52px;
+  font-size: 17px;
+  background: rgba(45, 32, 24, 0.86);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  filter: saturate(0.78) brightness(0.92);
+
+}
+
+.slide-03 {
+  background-image: url("../image/herobanner3.png");
+}
+.slide-03 .hero-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0px; /* h3+h2 묶음과 버튼 사이 간격 */
+  left: auto;
+  right: 80px;
+  bottom: 190px;
+}
+
+.slide-03 .hero-text {
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* h3와 h2 사이 간격 */
+}
+
+.slide-03 .hero-text h3 {
+  margin: 0;
+  font-size: 96px;
+  color: #8f6c5f;
+}
+
+.slide-03 .hero-text h2 {
+  margin: 0;
+  font-size: 96px;
+  color: #fffaf7;
+  text-shadow: none;
+}
+
+.slide-03 .hero-btn {
+  width: 180px;
+  height: 48px;
+  font-size: 16px;
+  background: #6f4328;
+}
+
+.slide-04 {
+  background-image: url("../image/herobanner4.png");
+}
+
+/* Slide 04: 공간 등록 배너 */
+.slide-04 .hero-container {
+  left: 90px;
+  bottom: 200px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.slide-04 .hero-text {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.slide-04 .hero-text h2 {
+  margin: 0;
+  font-family: "IncheonEducation", "Times New Roman", serif;
+  font-size: 78px;
+  line-height: 1.1;
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  color: #3b2a22;
+  text-shadow: 0 3px 14px rgba(255, 255, 255, 0.45);
+}
+
+.slide-04 .hero-text p {
+  margin: 0;
+  font-size: 22px;
+  line-height: 1.5;
+  font-weight: 500;
+  color: #5a4a42;
+}
+
+.slide-04 .hero-btn {
+  width: 240px;
+  height: 54px;
+  font-size: 17px;
+  font-weight: 600;
+  background: #6f4328;
+  color: #fff;
+  border-radius: 8px;
+}
+
+.slide-04 .hero-btn:hover {
+  background: #52301e;
+}
+
+/* Hero Text Area */
+.hero-container {
+  position: absolute;
+  left: 20px;
+  bottom: 160px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+  white-space: nowrap;
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
 
 .hero-text h2 {
-  margin: 0 0 22px;
+  margin: 0;
   font-family: "IncheonEducation", "Times New Roman", serif;
   text-shadow: 0 3px 14px rgba(0, 0, 0, 0.12);
   font-size: 96px;
@@ -160,29 +344,24 @@ button {
   color: #1e1a17;
 }
 
-.hero-text {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-}
-
-.hero-container{
-position: absolute;
-left: 20px;
-bottom: 160px;
-display: flex;
-flex-direction: column;
-white-space: nowrap;
-
-
+.hero-text h3 {
+  margin: 0;
+  font-family: "IncheonEducation", "Times New Roman", serif;
+  text-shadow: 0 3px 14px rgba(0, 0, 0, 0.12);
+  font-size: 56px;
+  line-height: 1.2;
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  color: #1e1a17;
 }
 
 .hero-text p {
-  margin: 0 0 24px;
+  margin: 0;
   font-size: 20px;
   color: #3c332d;
 }
 
+/* Hero Button */
 .hero-btn {
   width: 230px;
   height: 52px;
@@ -194,6 +373,7 @@ white-space: nowrap;
   align-items: center;
   justify-content: center;
   gap: 18px;
+
   font-size: 20px;
 }
 
@@ -202,26 +382,42 @@ white-space: nowrap;
   background: #211915;
 }
 
-.hero-dots {
-  position: absolute;
-  left: 50%;
-  bottom: 24px;
-  transform: translateX(-50%);
-  gap: 10px;
+/* Swiper Pagination */
+.hero-pagination {
+  bottom: 24px !important;
 }
 
-.hero-dots button {
+.hero-pagination .swiper-pagination-bullet {
   width: 11px;
   height: 11px;
   border-radius: 50%;
   border: 1px solid #fff;
   background: transparent;
-  padding: 0;
+  opacity: 1;
 }
 
-.hero-dots button.active {
+.hero-pagination .swiper-pagination-bullet-active {
   background: #8d7d70;
   border-color: #8d7d70;
+}
+
+/* Swiper Navigation */
+.hero-prev,
+.hero-next {
+  color: rgba(255, 255, 255, 0.75);
+  width: 36px;
+  height: 36px;
+}
+
+.hero-prev::after,
+.hero-next::after {
+  font-size: 22px;
+  font-weight: 300;
+}
+
+.hero-prev:hover,
+.hero-next:hover {
+  color: #fff;
 }
 
 /* Recommend 임시 영역 */
